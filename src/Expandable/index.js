@@ -13,7 +13,6 @@ const Wrapper = styled.div`
 const ItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background: #EEE;
   ${(props) => !props.isFirst && `margin-top: 10px;`}
 `;
 
@@ -120,7 +119,7 @@ export default class Expandable extends React.Component {
         style={this.calculateStyle({ children, springOptions, activeIndexes })}
       >
       {(styles) => (
-        <Wrapper>
+        <Wrapper {...props}>
           {children.map((child, index) => (
             <ItemWrapper isFirst={index === 0} key={index}>
               <ItemHeader onClick={() => this.trigger(index, { enableMultiOpen, activeIndexes })}>
