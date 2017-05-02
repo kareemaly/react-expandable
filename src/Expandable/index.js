@@ -27,15 +27,32 @@ const ItemContent = styled.div`
 export default class Expandable extends React.Component {
 
   static propTypes = {
-    children: PropTypes.arrayOf(PropTypes.element),
-    headers: PropTypes.arrayOf(PropTypes.func),
+    /**
+     * An array of react elements, these are the tabs.
+     */
+    children: PropTypes.arrayOf(PropTypes.element).isRequired,
+    /**
+     * An array of functions that returns react elements.
+     * The function will be called with an object that has isOpened option.
+     */
+    headers: PropTypes.arrayOf(PropTypes.func).isRequired,
+    /**
+     * React motion spring presets.
+     */
     springOptions: PropTypes.shape({
       stiffness: PropTypes.number,
       damping: PropTypes.number,
       precision: PropTypes.number,
     }),
+    /**
+     * Whether you want to enable multiple opens or not.
+     */
     enableMultiOpen: React.PropTypes.bool,
-  }
+  };
+
+  static defaultProps = {
+    enableMultiOpen: false,
+  };
 
   componentWillMount() {
     this.setState({

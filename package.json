@@ -16,6 +16,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "node ./bin/doc.js",
+    "prebuild": "npm run doc",
     "build": "webpack --config webpack.prod.config --progress --colors",
     "start": "node server.js",
     "lint": "eslint src",
@@ -39,6 +41,7 @@
     "eslint-plugin-react": "^6.10.3",
     "express": "^4.15.2",
     "material-ui": "^0.17.3",
+    "react-docgen": "^2.14.1",
     "react-dom": "^15.5.3",
     "react-hot-loader": "^1.3.1",
     "react-tap-event-plugin": "^2.0.1",
