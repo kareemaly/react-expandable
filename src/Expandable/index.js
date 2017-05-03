@@ -37,7 +37,8 @@ export default class Expandable extends React.Component {
      */
     headers: PropTypes.arrayOf(PropTypes.func).isRequired,
     /**
-     * React motion spring presets.
+     * React motion configurations.
+     * [More about this here](https://github.com/chenglou/react-motion#--spring-val-number-config-springhelperconfig--opaqueconfig)
      */
     springOptions: PropTypes.shape({
       stiffness: PropTypes.number,
