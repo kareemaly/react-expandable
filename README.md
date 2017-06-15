@@ -78,8 +78,8 @@ export default () => (
 | Property | Type | Default | Description |
 | --- | --- | --- | --- |
 | children* | arrayOf (element) |  | An array of react elements, these are the tabs. |
-| headers* | arrayOf (func) |  | An array of functions that returns react elements.<br />The function will be called with an object that has isOpened option. |
-| springOptions | shape {<br />`stiffness: number`<br />`damping: number`<br />`precision: number`<br />} |  | React motion configurations.<br />[More about this here](https://github.com/chenglou/react-motion#--spring-val-number-config-springhelperconfig--opaqueconfig) |
+| headers* | arrayOf (func) |  | An array of functions that returns react elements.<br />The function will be called with an object that has isOpened option. |
+| springOptions | shape {<br />`stiffness: number`<br />`damping: number`<br />`precision: number`<br />} |  | React motion configurations.<br />[More about this here](https://github.com/chenglou/react-motion#--spring-val-number-config-springhelperconfig--opaqueconfig) |
 | enableMultiOpen | bool | false | Whether you want to enable multiple opens or not. |
 
 Contributing
