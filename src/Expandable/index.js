@@ -47,7 +47,7 @@ export default class Expandable extends React.Component {
     /**
      * Whether you want to enable multiple opens or not.
      */
-    enableMultiOpen: React.PropTypes.bool,
+    enableMultiOpen: PropTypes.bool,
   };
 
   static defaultProps = {
